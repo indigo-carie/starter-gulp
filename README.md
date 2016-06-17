@@ -40,5 +40,5 @@ neat update
 
 ### Sass Watch
 ```
-sass --watch /assets/css/main.scss:/assets/css/main.css
+sass --watch assets/css/main.scss:assets/css/main.css
 ```
