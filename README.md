@@ -1,6 +1,6 @@
 # Starter Kit
 
-Starter Files for a Simple Webpages
+Starter Files for a Simple Website
 
 Includes:
 - [H5BP Classic](http://www.initializr.com/) Template
