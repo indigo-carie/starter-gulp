@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Carie Phon -- Front-End Developer -- @cariephon
 
 # THANKS
 
@@ -12,4 +12,5 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    JavaScript
+    Modernizr, PictureFill
