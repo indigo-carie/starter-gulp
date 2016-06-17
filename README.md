@@ -38,7 +38,7 @@ neat update
 ```
 
 
-## Sass Watch
+### Sass Watch
 ```
 sass --watch /assets/css/main.scss:/assets/css/main.css
 ```
