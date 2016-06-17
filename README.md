@@ -9,7 +9,7 @@ Includes:
 - [Bourbon](http://bourbon.io/)/[Neat](http://neat.bourbon.io/) Sass Mixin Library
 
 
-## Install Bourbon
+### Install Bourbon
 Install the gem
 ```
 gem install bourbon
@@ -20,7 +20,7 @@ Install Bourbon folder into /assets/css/vendor directory
 bourbon install
 ```
 
-## Install Neat
+### Install Neat
 Install the gem
 ```
 gem install neat
@@ -31,7 +31,7 @@ Install Bourbon folder into /assets/css/vendor directory
 neat install
 ```
 
-## Update Bourbon/Neat
+### Update Bourbon/Neat
 ```
 bourbon update
 neat update
