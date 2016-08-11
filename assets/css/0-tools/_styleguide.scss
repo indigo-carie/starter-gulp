@@ -1,0 +1,53 @@
+#styleguide {
+  main {
+    & > section {
+      border-bottom: 1px solid $base--border;
+    }
+  }
+
+  .section {
+    // SECTION HEADER: LABEL
+    &__header {
+      cursor: pointer;
+    }
+
+    // SECTION HEADER ACCORDION (PURE CSS3)
+    &__checkbox {
+      // COLLAPSED ACCORDION
+      display: none;
+
+      // EXPANDED ACCORDION
+      &:checked + .section__preview {
+        max-height: 500px;
+      }
+    }
+
+    &__preview {
+      // HIDE PREVIEW BLOCK INITIALLY
+      max-height: 0;
+      overflow: hidden;
+      @include transition(max-height 0.5s $ease-in-sine);
+
+      &--colors {
+        width: 100%;
+
+        li {
+          border: 1px solid $base--border;
+          margin-bottom: $space;
+        }
+      }
+    }
+  }
+
+  //COLORS
+  .section__preview--colors {
+    .color {
+      width: 100%;
+      height: 125px;
+
+      & + p {
+        padding: 0 1em;
+      }
+    }
+  }
+}

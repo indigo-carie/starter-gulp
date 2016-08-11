@@ -2,11 +2,20 @@
 @import '0-tools/bourbon/bourbon';        // SASS Library
 @import '0-tools/neat/neat';              // SASS Grid Library
 @import '0-tools/normalize';
+@import '0-tools/reset';
 
 // 1 - ELEMENTS: UI foundation
-@import '1-elements/reset';
+@import '1-elements/mixins';
+@import '1-elements/variables';
+@import '1-elements/typography';
 @import '1-elements/global';
+@import '1-elements/list';
+@import '1-elements/input';
 
 // 2 - MODULES: Elements within Presentational Sass - Reusable Patterns
 
 // 3 - LAYOUTS: Applying specific classes to <body> to render different layouts
+
+
+// STYLEGUIDE
+@import '0-tools/styleguide';
