@@ -23,16 +23,16 @@
 
       <main id="styleguide">
         <section>
+          <input type="checkbox" id="colorSection" class="section__checkbox input--custom" checked>
           <label for="colorSection" class="section__header">Colors</label>
-          <input type="checkbox" id="colorSection" class="section__checkbox input--custom">
-          <div class="section__preview">
+          <article class="section__preview">
             <ul class="section__preview--colors">
               <li>
                 <div class="color" style="background-color: red">
 
                 </div>
                 <p>
-                  $primary__color
+                  $color__primary
                 </p>
               </li>
               <li>
@@ -40,49 +40,60 @@
 
                 </div>
                 <p>
-                  $primary__color--background
+                  $color__primary--background
                 </p>
               </li>
             </ul>
-          </div>
+          </article>
         </section>
         <section>
-          <h1>Typography</h1>
+          <input type="checkbox" id="typeSection" class="section__checkbox input--custom">
+          <label for="typeSection" class="section__header">Typography</label>
+          <article class="section__preview">
+            <div class="section__preview--padding">
 
-          <h1>h1 Header</h1>
-          <h2>h2 Header</h2>
-          <h3>h3 Header</h3>
-          <h4>h4 Header</h4>
-          <h5>h5 Header</h5>
-          <h6>h6 Header</h6>
+              <h1>h1 Header</h1>
+              <h2>h2 Header</h2>
+              <h3>h3 Header</h3>
+              <h4>h4 Header</h4>
+              <h5>h5 Header</h5>
+              <h6>h6 Header</h6>
 
-          <p>
-            Body: Cupcake ipsum dolor sit amet. Jujubes soufflé soufflé marzipan cheesecake. Chupa chups apple pie chocolate macaroon pie cake ice cream sweet roll muffin. Cake marzipan brownie chupa chups pastry.
-          </p>
-          <p>
-            Sweet cotton candy cake pudding brownie pastry gummies macaroon cookie. Gingerbread macaroon dessert pastry halvah sweet chupa chups. Chocolate dessert carrot cake caramels.
-          </p>
-          <p>
-            Lemon drops fruitcake apple pie. Chocolate cake bear claw marshmallow gummies. Bear claw gummi bears dessert dragée jelly-o cupcake. <a href="#">Link</a>.
-          </p>
+              <p>
+                Body: Cupcake ipsum dolor sit amet. Jujubes soufflé soufflé marzipan cheesecake. Chupa chups apple pie chocolate macaroon pie cake ice cream sweet roll muffin. Cake marzipan brownie chupa chups pastry.
+              </p>
+              <p>
+                Sweet cotton candy cake pudding brownie pastry gummies macaroon cookie. Gingerbread macaroon dessert pastry halvah sweet chupa chups. Chocolate dessert carrot cake caramels.
+              </p>
+              <p>
+                Lemon drops fruitcake apple pie. Chocolate cake bear claw marshmallow gummies. Bear claw gummi bears dessert dragée jelly-o cupcake. <a href="#">Link</a>.
+              </p>
 
-          <button>Button</button>
+              <button>Button</button>
+            </div>
+          </article>
         </section>
 
         <section>
-          <form>
-            <fieldset>
-              <ledgend>Text </ledgend>
-              <input type="text" placeholder="text input">
-            </fieldset>
+          <input type="checkbox" id="inputSection" class="section__checkbox input--custom">
+          <label for="inputSection" class="section__header">Input</label>
+          <article class="section__preview">
+            <div class="section__preview--padding">
+              <form>
+                <fieldset>
+                  <ledgend>Text </ledgend>
+                  <input type="text" placeholder="text input">
+                </fieldset>
 
-            <fieldset>
-              <ledgend>Number </ledgend>
-              <input type="number" placeholder="number input">
-            </fieldset>
+                <fieldset>
+                  <ledgend>Number </ledgend>
+                  <input type="number" placeholder="number input">
+                </fieldset>
 
-            <input type="submit" value="submit">
-          </form>
+                <input type="submit" value="submit">
+              </form>
+            </div>
+          </article>
         </section>
       </main>
 
