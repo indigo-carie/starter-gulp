@@ -1,10 +1,11 @@
-$styleguide__color: #F15C59;
-$styleguide__color--attr: #67BFCF;
-$styleguide__color--value: #3D44AC;
+$styleguide__color: #7E597E;
+$styleguide__color--attr: #6BA318;
+$styleguide__color--value: #5A82BB;
 
 #styleguide {
   main {
     & > section {
+      border-top: 1px solid $color__base--border;
       border-bottom: 1px solid $color__base--border;
     }
   }
@@ -31,7 +32,7 @@ $styleguide__color--value: #3D44AC;
         }
 
         &.html {
-          color: $color__font; 
+          color: $color__font;
         }
       }
     }
@@ -71,7 +72,7 @@ $styleguide__color--value: #3D44AC;
       &:checked {
         // EXPANDED ACCORDION
         & ~ .section__preview {
-          max-height: 1000px;
+          max-height: 500px;
         }
 
         & + label {

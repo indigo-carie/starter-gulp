@@ -344,24 +344,28 @@ button, .button, input[type="button"], input[type="submit"] {
   display: inline-block;
   box-sizing: content-box;
   color: #FFFFFF;
-  background-color: #363636;
+  background-color: #757575;
   margin: 15px 10px 15px 0;
   padding: 0 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: color 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -moz-transition: color 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: color 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95), background-color 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   button::last-child, .button::last-child, input[type="button"]::last-child, input[type="submit"]::last-child {
     margin-right: 0; }
   button:hover, button:focus, .button:hover, .button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
     color: #FFFFFF;
-    background-color: #030303; }
+    background-color: #424242; }
   button[disabled], .button[disabled], input[type="button"][disabled], input[type="submit"][disabled] {
     color: rgba(0, 0, 0, 0.2);
-    background-color: rgba(54, 54, 54, 0.2);
+    background-color: rgba(117, 117, 117, 0.2);
     cursor: default; }
 
 fieldset input {
   margin-bottom: 15px; }
 
 #styleguide main > section {
+  border-top: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC; }
 #styleguide .code {
   padding: 1em;
@@ -372,11 +376,11 @@ fieldset input {
     font-size: 0.9em;
     color: rgba(0, 0, 0, 0.2); }
     #styleguide .code code span {
-      color: #F15C59; }
+      color: #7E597E; }
       #styleguide .code code span.attr {
-        color: #67BFCF; }
+        color: #6BA318; }
       #styleguide .code code span.value {
-        color: #3D44AC; }
+        color: #5A82BB; }
       #styleguide .code code span.html {
         color: #000000; }
 #styleguide .section__header {
@@ -406,7 +410,7 @@ fieldset input {
 #styleguide .section__checkbox {
   display: none; }
   #styleguide .section__checkbox:checked ~ .section__preview {
-    max-height: 1000px; }
+    max-height: 500px; }
   #styleguide .section__checkbox:checked + label {
     background-color: #EFEFEF; }
   #styleguide .section__checkbox:checked + .section__header:after {

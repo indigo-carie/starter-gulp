@@ -8,24 +8,25 @@ button, .button, input[type="button"], input[type="submit"] {
   min-width: auto;
   display: inline-block;
   box-sizing: content-box;
-  color: set-text-color($color__accent);
-  background-color: $color__accent;
+  color: set-text-color($color__primary);
+  background-color: $color__primary;
   margin: $space--medium $space $space--medium 0;
   padding: 0 $space--medium;
   cursor: pointer;
+  @include transition(color 0.25s $ease-in-out-sine, background-color 0.25s $ease-in-out-sine);
 
   &::last-child {
     margin-right: 0;
   }
 
   &:hover, &:focus {
-    color: set-text-color($color__accent--dark);
-    background-color: $color__accent--dark;
+    color: set-text-color($color__primary--dark);
+    background-color: $color__primary--dark;
   }
 
   &[disabled] {
     color: transparentize($color__font, 0.8);
-    background-color: transparentize($color__accent, 0.8);
+    background-color: transparentize($color__primary, 0.8);
     cursor: default;
   }
 }
