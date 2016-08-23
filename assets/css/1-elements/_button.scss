@@ -1,0 +1,31 @@
+button, .button, input[type="button"], input[type="submit"] {
+  @include appearance(none);
+  border: 0;
+  outline: 0;
+  height: $button--height;
+  line-height: $button--height;
+  vertical-align: baseline;
+  min-width: auto;
+  display: inline-block;
+  box-sizing: content-box;
+  color: set-text-color($color__accent);
+  background-color: $color__accent;
+  margin: $space--medium $space $space--medium 0;
+  padding: 0 $space--medium;
+  cursor: pointer;
+
+  &::last-child {
+    margin-right: 0;
+  }
+
+  &:hover, &:focus {
+    color: set-text-color($color__accent--dark);
+    background-color: $color__accent--dark;
+  }
+
+  &[disabled] {
+    color: transparentize($color__font, 0.8);
+    background-color: transparentize($color__accent, 0.8);
+    cursor: default;
+  }
+}

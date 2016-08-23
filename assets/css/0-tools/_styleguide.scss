@@ -1,7 +1,39 @@
+$styleguide__color: #F15C59;
+$styleguide__color--attr: #67BFCF;
+$styleguide__color--value: #3D44AC;
+
 #styleguide {
   main {
     & > section {
       border-bottom: 1px solid $color__base--border;
+    }
+  }
+
+  .code {
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid $color__base--border;
+    background-color: $color__base--highlight;
+
+    code {
+      font-size: 0.9em;
+      color: transparentize($color__font, 0.8);
+
+      span {
+        color: $styleguide__color;
+
+        &.attr {
+          color: $styleguide__color--attr;
+        }
+
+        &.value {
+          color: $styleguide__color--value;
+        }
+
+        &.html {
+          color: $color__font; 
+        }
+      }
     }
   }
 
@@ -70,7 +102,16 @@
       }
 
       &--padding {
-        padding: 0 1em 2em;
+        padding: 1em 1em 2em;
+      }
+    }
+  }
+
+  //PREVIEW HEADERS
+  .section__preview {
+    section {
+      h2 {
+        color: $color__secondary--dark;
       }
     }
   }

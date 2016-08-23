@@ -289,7 +289,26 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-body {
+.color__primary {
+  background-color: #757575; }
+  .color__primary--light {
+    background-color: #a8a8a8; }
+  .color__primary--dark {
+    background-color: #424242; }
+.color__secondary {
+  background-color: #B5B5B5; }
+  .color__secondary--light {
+    background-color: #e8e8e8; }
+  .color__secondary--dark {
+    background-color: #828282; }
+.color__accent {
+  background-color: #363636; }
+  .color__accent--light {
+    background-color: dimgray; }
+  .color__accent--dark {
+    background-color: #030303; }
+
+html, body {
   font: 100%/1.4 'Open Sans', Helvetica, Arial, sans-serif; }
 
 ul {
@@ -299,6 +318,10 @@ ul {
   ul.list--bullets {
     list-style-type: default; }
 
+input {
+  padding-right: 5px;
+  padding-left: 5px; }
+
 .input--custom {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -306,8 +329,56 @@ ul {
   -o-appearance: none;
   appearance: none; }
 
+button, .button, input[type="button"], input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: baseline;
+  min-width: auto;
+  display: inline-block;
+  box-sizing: content-box;
+  color: #FFFFFF;
+  background-color: #363636;
+  margin: 15px 10px 15px 0;
+  padding: 0 15px;
+  cursor: pointer; }
+  button::last-child, .button::last-child, input[type="button"]::last-child, input[type="submit"]::last-child {
+    margin-right: 0; }
+  button:hover, button:focus, .button:hover, .button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    color: #FFFFFF;
+    background-color: #030303; }
+  button[disabled], .button[disabled], input[type="button"][disabled], input[type="submit"][disabled] {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(54, 54, 54, 0.2);
+    cursor: default; }
+
+fieldset input {
+  margin-bottom: 15px; }
+
 #styleguide main > section {
   border-bottom: 1px solid #CCCCCC; }
+#styleguide .code {
+  padding: 1em;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC;
+  background-color: #EFEFEF; }
+  #styleguide .code code {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.2); }
+    #styleguide .code code span {
+      color: #F15C59; }
+      #styleguide .code code span.attr {
+        color: #67BFCF; }
+      #styleguide .code code span.value {
+        color: #3D44AC; }
+      #styleguide .code code span.html {
+        color: #000000; }
 #styleguide .section__header {
   font-size: 2em;
   padding: 0.25em;
@@ -358,7 +429,9 @@ ul {
       border: 1px solid #CCCCCC;
       margin-bottom: 10px; }
   #styleguide .section__preview--padding {
-    padding: 0 1em 2em; }
+    padding: 1em 1em 2em; }
+#styleguide .section__preview section h2 {
+  color: #828282; }
 #styleguide .section__preview--colors .color {
   width: 100%;
   height: 125px; }

@@ -1,3 +1,9 @@
+input {
+  //padding around input box/placeholder
+  @include padding(null $space--small null $space--small);
+}
+
+// CUSTOM INPUT STYLES
 .input {
   &--custom {
     @include appearance(none);

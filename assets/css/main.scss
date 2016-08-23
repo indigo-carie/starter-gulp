@@ -7,12 +7,16 @@
 // 1 - ELEMENTS: UI foundation
 @import '1-elements/mixins';
 @import '1-elements/variables';
+@import '1-elements/functions';
 @import '1-elements/typography';
+@import '1-elements/color';
 @import '1-elements/global';
 @import '1-elements/list';
 @import '1-elements/input';
+@import '1-elements/button';
 
 // 2 - MODULES: Elements within Presentational Sass - Reusable Patterns
+@import '2-modules/form';
 
 // 3 - LAYOUTS: Applying specific classes to <body> to render different layouts
 

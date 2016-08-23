@@ -1,9 +1,29 @@
+$space--small: 5px;
 $space: 10px;
+$space--medium: 15px;
 
-// PRIMARY COLORS
-$color__primary: red;
-$color__primary--background: blue;
+// BUTTONS
+$button--height: 40px;
+
+// PRIMARY COLORS ()
+$color__primary: #757575;
+$color__primary--light: lighten($color__primary, 20%);
+$color__primary--dark: darken($color__primary, 20%);
+
+// SECONDARY COLORS
+$color__secondary: #B5B5B5;
+$color__secondary--light: lighten($color__secondary, 20%);
+$color__secondary--dark: darken($color__secondary, 20%);
+
+// ACCENT COLORS (Action Buttons, Interactive Elements)
+$color__accent: #363636;
+$color__accent--light: lighten($color__accent, 20%);
+$color__accent--dark: darken($color__accent, 20%);
 
 // VARIATIONS OF GRAY
 $color__base--border: #CCCCCC;
 $color__base--highlight: #EFEFEF;
+
+// TEXT COLORS
+$color__font: #000000;
+$color__font--light: #FFFFFF;
