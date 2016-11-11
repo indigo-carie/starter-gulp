@@ -1,12 +1,13 @@
 // 0 - TOOLS
 @import '0-tools/bourbon/bourbon';        // SASS Library
+@import '0-tools/styleguide-settings';    // Neat Settings (Temporary)
 @import '0-tools/neat/neat';              // SASS Grid Library
 @import '0-tools/normalize';
 @import '0-tools/reset';
 
 // 1 - ELEMENTS: UI foundation
-@import '1-elements/mixins';
 @import '1-elements/variables';
+@import '1-elements/mixins';
 @import '1-elements/functions';
 @import '1-elements/typography';
 @import '1-elements/color';

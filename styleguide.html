@@ -16,136 +16,178 @@
         <!-- RESPONSIVE IMAGE POLYFILL FOR <picture>, srcset, AND sizes -->
         <script src='assets/js/vendor/picturefill.js'></script>
     </head>
-    <body>
+    <body id="styleguide">
     <!--[if lt IE 8]>
     <p class='browserupgrade'>You are using an <straong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-      <main id="styleguide">
-        <section>
-          <input type="checkbox" id="colorSection" class="section__checkbox" checked>
-          <label for="colorSection" class="section__header">Colors</label>
-          <article class="section__preview">
-            <ul class="section__preview--colors">
+      <nav>
+        <div class="mobile mobile__hamburger">
+
+        </div>
+        <div class="nav__container">
+          <strong>Table of Contents</strong>
+          <ul>
+            <li>
+              <a>
+                Color
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+        <article class="accordion">
+          <h1 class="accordion__summary">
+            Colors
+          </h1>
+          <section class="accordion__content">
+            <ul class="accordion__content--container">
               <li>
                 <div class="color color__primary">
-
-                </div>
-                <p>
                   $color__primary
-                </p>
+                </div>
               </li>
               <li>
                 <div class="color color__secondary">
-
-                </div>
-                <p>
                   $color__secondary
-                </p>
+                </div>
               </li>
               <li>
                 <div class="color color__accent">
-
-                </div>
-                <p>
                   $color__accent
-                </p>
+                </div>
               </li>
             </ul>
-          </article>
-        </section>
-        <section>
-          <input type="checkbox" id="typeSection" class="section__checkbox">
-          <label for="typeSection" class="section__header">Typography</label>
-          <article class="section__preview">
-            <div class="section__preview--padding">
+          </section>
+        </article>
 
-              <h1>h1 Header</h1>
-              <h2>h2 Header</h2>
-              <h3>h3 Header</h3>
-              <h4>h4 Header</h4>
-              <h5>h5 Header</h5>
-              <h6>h6 Header</h6>
-
-              <p>
-                Body: Cupcake ipsum dolor sit amet. Jujubes soufflé soufflé marzipan cheesecake. Chupa chups apple pie chocolate macaroon pie cake ice cream sweet roll muffin. Cake marzipan brownie chupa chups pastry.
-              </p>
-              <p>
-                Sweet cotton candy cake pudding brownie pastry gummies macaroon cookie. Gingerbread macaroon dessert pastry halvah sweet chupa chups. Chocolate dessert carrot cake caramels.
-              </p>
-              <p>
-                Lemon drops fruitcake apple pie. Chocolate cake bear claw marshmallow gummies. Bear claw gummi bears dessert dragée jelly-o cupcake. <a href="#">Link</a>.
-              </p>
-
-            </div>
-          </article>
-        </section>
-
-        <section>
-          <input type="checkbox" id="buttonSection" class="section__checkbox">
-          <label for="buttonSection" class="section__header">Buttons</label>
-          <article class="section__preview">
-            <div class="section__preview--padding">
-              <section>
-                <h2>Primary</h2>
-                <button type="button">Button</button>
-                <button type="submit">Button Submit</button>
-                <a class="button">Link</a>
-                <input type="button" value="Input Button"/>
-                <input type="submit" value="Input Submit" />
-
-                <div class="code">
-                  <code>
-  &lt;<span>button</span> <span class="attr">type="</span><span class="value">button</span><span class="attr">"</span>&gt;<span class="html">Button</span>&lt;/<span>button</span>&gt;<br/>
-  &lt;<span>button</span> <span class="attr">type="</span><span class="value">submit</span><span class="attr">"</span>&gt;<span class="html">Button Submit</span>&lt;/<span>button</span>&gt;</br/>
-  &lt;<span>a</span> <span class="attr">class="</span><span class="value">button</span><span class="attr">"</span>&gt;<span class="html">Link</span>&lt;/<span>a</span>&gt;</br/>
-  &lt;<span>input</span> <span class="attr">type="</span><span class="value">button</span><span class="attr">"</span> <span class="attr">value="</span><span class="value">Input</span><span class="attr">"</span>/&gt;</br/>
-  &lt;<span>input</span> <span class="attr">type="</span><span class="value">submit</span><span class="attr">"</span> <span class="attr">value="</span><span class="value">Input Submit</span><span class="attr">"</span>/&gt;</br/>
-                  </code>
-                </div>
-              </section>
-              <section>
-                <h2>Disabled</h2>
-                <button type="button" disabled>Button</button>
-                <button type="submit" disabled>Button Submit</button>
-                <a class="button" disabled>Link</a>
-                <input type="button" value="Input Button" disabled/>
-                <input type="submit" value="Input Submit" disabled />
-              </section>
-            </div>
-          </article>
-        </section>
-
-        <section>
-          <input type="checkbox" id="inputSection" class="section__checkbox">
-          <label for="inputSection" class="section__header">Input</label>
-          <article class="section__preview">
-            <div class="section__preview--padding">
-              <form>
-                <fieldset>
-                  <legend>Text </legend>
-                  <input type="text" placeholder="text input">
-                </fieldset>
-
-                <fieldset>
-                  <legend>Number </legend>
-                  <input type="number" placeholder="number input">
-                </fieldset>
-
-                <input type="submit" value="submit">
-              </form>
-            </div>
-          </article>
-        </section>
       </main>
-
-      <nav>
-
-      </nav>
 
       <!-- Cross-browser full element.classList implementation -->
       <script src='assets/js/vendor/classList.js'></script>
+      <script src='assets/js/styleguide.js'></script>
       <script src='assets/js/main.js'></script>
 
     </body>
 </html>
+
+<!--
+<details>
+  <summary class="section__header">
+    Colors
+  </summary>
+  <article class="section__preview">
+    <ul class="section__preview--colors">
+      <li>
+        <div class="color color__primary">
+
+        </div>
+        <p>
+          $color__primary
+        </p>
+      </li>
+      <li>
+        <div class="color color__secondary">
+
+        </div>
+        <p>
+          $color__secondary
+        </p>
+      </li>
+      <li>
+        <div class="color color__accent">
+
+        </div>
+        <p>
+          $color__accent
+        </p>
+      </li>
+    </ul>
+  </article>
+</details>
+</section>
+<section>
+<input type="checkbox" id="typeSection" class="section__checkbox">
+<label for="typeSection" class="section__header">Typography</label>
+<article class="section__preview">
+  <div class="section__preview--padding">
+
+    <h1>h1 Header</h1>
+    <h2>h2 Header</h2>
+    <h3>h3 Header</h3>
+    <h4>h4 Header</h4>
+    <h5>h5 Header</h5>
+    <h6>h6 Header</h6>
+
+    <p>
+      Body: Cupcake ipsum dolor sit amet. Jujubes soufflé soufflé marzipan cheesecake. Chupa chups apple pie chocolate macaroon pie cake ice cream sweet roll muffin. Cake marzipan brownie chupa chups pastry.
+    </p>
+    <p>
+      Sweet cotton candy cake pudding brownie pastry gummies macaroon cookie. Gingerbread macaroon dessert pastry halvah sweet chupa chups. Chocolate dessert carrot cake caramels.
+    </p>
+    <p>
+      Lemon drops fruitcake apple pie. Chocolate cake bear claw marshmallow gummies. Bear claw gummi bears dessert dragée jelly-o cupcake. <a href="#">Link</a>.
+    </p>
+
+  </div>
+</article>
+</section>
+
+<section>
+<input type="checkbox" id="buttonSection" class="section__checkbox">
+<label for="buttonSection" class="section__header">Buttons</label>
+<article class="section__preview">
+  <div class="section__preview--padding">
+    <section>
+      <h2>Primary</h2>
+      <button type="button">Button</button>
+      <button type="submit">Button Submit</button>
+      <a class="button">Link</a>
+      <input type="button" value="Input Button"/>
+      <input type="submit" value="Input Submit" />
+
+      <div class="code">
+        <code>
+&lt;<span>button</span> <span class="attr">type="</span><span class="value">button</span><span class="attr">"</span>&gt;<span class="html">Button</span>&lt;/<span>button</span>&gt;<br/>
+&lt;<span>button</span> <span class="attr">type="</span><span class="value">submit</span><span class="attr">"</span>&gt;<span class="html">Button Submit</span>&lt;/<span>button</span>&gt;</br/>
+&lt;<span>a</span> <span class="attr">class="</span><span class="value">button</span><span class="attr">"</span>&gt;<span class="html">Link</span>&lt;/<span>a</span>&gt;</br/>
+&lt;<span>input</span> <span class="attr">type="</span><span class="value">button</span><span class="attr">"</span> <span class="attr">value="</span><span class="value">Input</span><span class="attr">"</span>/&gt;</br/>
+&lt;<span>input</span> <span class="attr">type="</span><span class="value">submit</span><span class="attr">"</span> <span class="attr">value="</span><span class="value">Input Submit</span><span class="attr">"</span>/&gt;</br/>
+        </code>
+      </div>
+    </section>
+    <section>
+      <h2>Disabled</h2>
+      <button type="button" disabled>Button</button>
+      <button type="submit" disabled>Button Submit</button>
+      <a class="button" disabled>Link</a>
+      <input type="button" value="Input Button" disabled/>
+      <input type="submit" value="Input Submit" disabled />
+    </section>
+  </div>
+</article>
+</section>
+
+<section>
+<input type="checkbox" id="inputSection" class="section__checkbox">
+<label for="inputSection" class="section__header">Input</label>
+<article class="section__preview">
+  <div class="section__preview--padding">
+    <form>
+      <fieldset>
+        <legend>Text </legend>
+        <input type="text" placeholder="text input">
+      </fieldset>
+
+      <fieldset>
+        <legend>Number </legend>
+        <input type="number" placeholder="number input">
+      </fieldset>
+
+      <input type="submit" value="submit">
+    </form>
+  </div>
+</article>
+-->

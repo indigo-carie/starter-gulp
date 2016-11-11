@@ -2,10 +2,12 @@ $space--small: 5px;
 $space: 10px;
 $space--medium: 15px;
 
+$padding: 1em; 
+
 // BUTTONS
 $button--height: 40px;
 
-// PRIMARY COLORS ()
+// PRIMARY COLORS
 $color__primary: #757575;
 $color__primary--light: lighten($color__primary, 20%);
 $color__primary--dark: darken($color__primary, 20%);

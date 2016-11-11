@@ -1,0 +1,23 @@
+// RESPONSIVE BREAKPOINTS
+$small: 767px;
+$large: 1200px;
+
+$breakpoints: (
+  'small': ( max-width: $small ),
+  'medium': ( min-width: $small + 1px ),
+  'large': ( min-width: $large )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  //if key exists in map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints media query based on value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "breakpoint value cannot be found from '#{$breakpoint}'. "
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
