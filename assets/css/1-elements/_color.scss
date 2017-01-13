@@ -1,37 +1,46 @@
 .color {
   &__primary {
     background-color: $color__primary;
+    color: set-text-color($color__primary);
 
     &--light {
       background-color: $color__primary--light;
+      color: set-text-color($color__primary--light);
     }
 
     &--dark {
       background-color: $color__primary--dark;
+      color: set-text-color($color__primary--dark);
     }
   }
 
   &__secondary {
     background-color: $color__secondary;
+    color: set-text-color($color__secondary);
 
     &--light {
       background-color: $color__secondary--light;
+      color: set-text-color($color__secondary--light);
     }
 
     &--dark {
       background-color: $color__secondary--dark;
+      color: set-text-color($color__secondary--dark);
     }
   }
 
   &__accent {
     background-color: $color__accent;
+    color: set-text-color($color__accent);
 
     &--light {
       background-color: $color__accent--light;
+      color: set-text-color($color__accent--light);
     }
 
     &--dark {
       background-color: $color__accent--dark;
+      color: set-text-color($color__accent--dark);
     }
   }
 }

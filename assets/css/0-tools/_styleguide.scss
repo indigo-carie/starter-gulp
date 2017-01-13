@@ -100,7 +100,7 @@ $styleguide__color--value: #5A82BB;
       position: relative;
       cursor: pointer;
       border-top: 1px solid $color__base--border;
-      border-bottom: 1px solid $color__base--border;
+      //border-bottom: 1px solid $color__base--border;
     }
 
     &__summary::after {
@@ -115,6 +115,7 @@ $styleguide__color--value: #5A82BB;
     &__content {
         // accordion content styles
         overflow: hidden;
+        border-top: 1px solid $color__base--border;
         border-bottom: 1px solid $color__base--border;
         transition: max-height $accordion__content--speed ease-in;
     }
@@ -130,7 +131,6 @@ $styleguide__color--value: #5A82BB;
     // accordion styles CLOSE
 
     .accordion__summary {
-      border-bottom: 0;
 
       &::after {
         // custom marker closed
@@ -142,6 +142,7 @@ $styleguide__color--value: #5A82BB;
 
       & + .accordion__content  {
         max-height: 0;
+        border-bottom: 0;
         transition: max-height $accordion__content--speed ease-out;
       }
     }
@@ -155,7 +156,8 @@ $styleguide__color--value: #5A82BB;
     .color {
       width: 100%;
       height: 125px;
-      padding: $space--small;
+      padding: $space--small $space;
+      margin-bottom: $padding;
       @include display(flex);
       @include align-items(flex-end);
       @include justify-content(flex-end);
