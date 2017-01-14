@@ -12,19 +12,20 @@ const gulp = require('gulp'),
   	neither:['src/*.html', 'src/**/*.html'],
   	styles:['src/css/**/*.scss', 'src/css/*.scss'],
   	styleSheet:['src/css/main.scss'],
-  	scripts:['src/js/*.js','src/js/components/*.js'],
+  	scripts:['src/js/*.js','src/js/components/*.js', 'src/vendor/classList.min.js'],
   	images:['src/img/*.jpg', 'src/img/*.svg', 'src/img/**/*'],
-  	html:['src/*.html', 'src/**/*.html']
+  	html:['src/*.html', 'src/**/*.html'],
+    info:['src/*.png', 'src/*.xml', 'src/*.ico', 'src/*.txt']
   },
   vendor = {
-  	js: ['src/js/vendor/modernizr.js', 'src/js/vendor/picturefill.js']
+  	js: ['src/js/vendor/modernizr.js', 'src/js/vendor/picturefill.min.js']
   };
 
 var flags = require('yargs').argv;
 
 gulp.task('start',['clean','build','serve','watch']);
-gulp.task('watch',['watch:styles','watch:scripts','watch:neither','watch:html']);
-gulp.task('build',['build:styles','build:scripts', 'build:scripts:vendor', 'build:html', 'copy:images']);
+gulp.task('watch',['watch:styles','watch:scripts','watch:neither','watch:html','watch:images','watch:info']);
+gulp.task('build',['build:styles','build:scripts', 'build:scripts:vendor', 'build:html', 'copy:images', 'copy:info']);
 
 gulp.task('clean',function(){
 	if(flags.prod){
@@ -43,7 +44,7 @@ gulp.task('lint', function() {
 gulp.task('build:styles',function(){
 	var dest = flags.prod?'dist/css':'build/css';
 	var task = gulp.src(paths.styleSheet)
-	.pipe(sass({includePaths: require('node-bourbon').includePaths}).on('error', sass.logError));
+	.pipe(sass({includePaths: require('node-neat').includePaths}).on('error', sass.logError));
 	if(flags.prod){
 		task = task.pipe(cleanCSS())
 		.pipe(concat('styles.min.css'));
@@ -98,6 +99,13 @@ gulp.task('copy:images',function(){
 	return task;
 });
 
+gulp.task('copy:info',function(){
+	var dest = flags.prod?'dist/':'build/';
+	var task = gulp.src(paths.info);
+	task = task.pipe(gulp.dest(dest))
+	return task;
+});
+
 gulp.task('reload',function(){
 	return gulp.src(paths.neither)
 	.pipe(connect.reload());
@@ -128,4 +136,12 @@ gulp.task('watch:html', function(){
 
 gulp.task('watch:neither', function(){
 	gulp.watch(paths.neither, ['reload'])
+});
+
+gulp.task('watch:images', function(){
+	gulp.watch(paths.images, ['copy:images'])
+});
+
+gulp.task('watch:info', function(){
+	gulp.watch(paths.info, ['copy:info'])
 });

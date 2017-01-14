@@ -1,26 +1,25 @@
 // 0 - TOOLS
-@import '0-tools/bourbon/bourbon';        // SASS Library
-@import '0-tools/styleguide-settings';    // Neat Settings (Temporary)
-@import '0-tools/neat/neat';              // SASS Grid Library
-@import '0-tools/normalize';
-@import '0-tools/reset';
+@import 'bourbon'; // Sass Mixin Library
+@import 'neat';
+@import '0-tools/normalize.scss';
+@import '0-tools/reset.scss';
 
 // 1 - ELEMENTS: UI foundation
-@import '1-elements/variables';
-@import '1-elements/mixins';
-@import '1-elements/functions';
-@import '1-elements/typography';
-@import '1-elements/color';
-@import '1-elements/global';
-@import '1-elements/list';
-@import '1-elements/input';
-@import '1-elements/button';
+@import '1-elements/variables.scss';
+@import '1-elements/mixins.scss';
+@import '1-elements/functions.scss';
+@import '1-elements/typography.scss';
+@import '1-elements/color.scss';
+@import '1-elements/global.scss';
+@import '1-elements/list.scss';
+@import '1-elements/input.scss';
+@import '1-elements/button.scss';
 
 // 2 - MODULES: Elements within Presentational Sass - Reusable Patterns
-@import '2-modules/form';
+@import '2-modules/form.scss';
 
 // 3 - LAYOUTS: Applying specific classes to <body> to render different layouts
 
 
 // STYLEGUIDE
-@import '0-tools/styleguide';
+@import '0-tools/styleguide.scss';

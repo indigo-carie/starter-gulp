@@ -28,6 +28,7 @@
     "gulp-strip-comments": "^2.4.3",
     "gulp-uglify": "^2.0.0",
     "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2",
     "yargs": "^6.6.0"
   }
 }
