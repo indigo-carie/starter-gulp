@@ -3,174 +3,174 @@ $styleguide__color--attr: #6BA318;
 $styleguide__color--value: #5A82BB;
 
 #styleguide {
-  @include outer-container(100%);
-
-  .mobile {
-    &__hamburger {
-      opacity: 0;
-      pointer-events: none;
-
-      @include respond-to(small) {
-        opacity: 1;
-        pointer-events: default;
-      }
-    }
-  }
-
-  // NAV
-  nav {
-    width: 100%;
-    background: $color__secondary;
-    padding: $padding;
-
-    @include respond-to(small) {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      z-index: 1;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    @include respond-to(medium) {
-      @include span-columns(3);
-    }
-  }
-
-  main {
-    @include respond-to(medium) {
-      @include span-columns(9);
-      @include omega(); // remove right gutter
-    }
-  }
-
-  .code {
-    padding: 1em;
-    border-radius: 4px;
-    border: 1px solid $color__base--border;
-    background-color: $color__base--highlight;
-
-    code {
-      font-size: 0.9em;
-      color: transparentize($color__font, 0.8);
-
-      span {
-        color: $styleguide__color;
-
-        &.attr {
-          color: $styleguide__color--attr;
-        }
-
-        &.value {
-          color: $styleguide__color--value;
-        }
-
-        &.html {
-          color: $color__font;
-        }
-      }
-    }
-  }
-
-  // ACCORDION
-  $accordion--width: 100%;
-  $accordion__summary--font: 42px;
-  $accordion__summary--arrow: $accordion__summary--font/4;
-  $accordion__summary--arrow-position: 48%;
-  $accordion__content--speed: 0.12s;
-
-  // css arrow template
-  %arrow {
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: $accordion__summary--arrow-position;
-    margin-left: $accordion__summary--font/4;
-  }
-
-  .accordion {
-    // details element
-    width: $accordion--width;
-
-    &__summary {
-      // summary element
-      margin: 0;
-      font-size: $accordion__summary--font;
-      position: relative;
-      cursor: pointer;
-      border-top: 1px solid $color__base--border;
-      //border-bottom: 1px solid $color__base--border;
-    }
-
-    &__summary::after {
-      // custom marker OPEN
-      content: '';
-      @extend %arrow;
-      border-left: $accordion__summary--arrow solid transparent;
-      border-right: $accordion__summary--arrow solid transparent;
-      border-top: $accordion__summary--arrow solid black;
-    }
-
-    &__content {
-        // accordion content styles
-        overflow: hidden;
-        border-top: 1px solid $color__base--border;
-        border-bottom: 1px solid $color__base--border;
-        transition: max-height $accordion__content--speed ease-in;
-    }
-
-    &:first-child {
-      .accordion__summary {
-        border-top: 0;
-      }
-    }
-  }
-
-  .accordion.close {
-    // accordion styles CLOSE
-
-    .accordion__summary {
-
-      &::after {
-        // custom marker closed
-        border-left: $accordion__summary--arrow solid transparent;
-        border-right: $accordion__summary--arrow solid transparent;
-        border-top: 0;
-        border-bottom: $accordion__summary--arrow solid black;
-      }
-
-      & + .accordion__content  {
-        max-height: 0;
-        border-bottom: 0;
-        transition: max-height $accordion__content--speed ease-out;
-      }
-    }
-  }
-
-  // CONTENT CONTAINER
-  .accordion__content--container {
-    padding: $padding;
-
-    // CONTENT SPECIFIC STYLES
-    .color {
-      width: 100%;
-      height: 125px;
-      padding: $space--small $space;
-      margin-bottom: $padding;
-      @include display(flex);
-      @include align-items(flex-end);
-      @include justify-content(flex-end);
-    }
-
-    @include respond-to(medium) {
-      li {
-        @include span-columns(4);
-      }
-
-      li:last-child {
-        @include omega();
-      }
-    }
-  }
+  // @include outer-container(100%);
+  //
+  // .mobile {
+  //   &__hamburger {
+  //     opacity: 0;
+  //     pointer-events: none;
+  //
+  //     @include respond-to(small) {
+  //       opacity: 1;
+  //       pointer-events: default;
+  //     }
+  //   }
+  // }
+  //
+  // // NAV
+  // nav {
+  //   width: 100%;
+  //   background: $color__secondary;
+  //   padding: $padding;
+  //
+  //   @include respond-to(small) {
+  //     position: fixed;
+  //     top: 0;
+  //     left: 0;
+  //     height: 100%;
+  //     z-index: 1;
+  //     opacity: 0;
+  //     pointer-events: none;
+  //   }
+  //
+  //   @include respond-to(medium) {
+  //     @include span-columns(3);
+  //   }
+  // }
+  //
+  // main {
+  //   @include respond-to(medium) {
+  //     @include span-columns(9);
+  //     @include omega(); // remove right gutter
+  //   }
+  // }
+  //
+  // .code {
+  //   padding: 1em;
+  //   border-radius: 4px;
+  //   border: 1px solid $color__base--border;
+  //   background-color: $color__base--highlight;
+  //
+  //   code {
+  //     font-size: 0.9em;
+  //     color: transparentize($color__font, 0.8);
+  //
+  //     span {
+  //       color: $styleguide__color;
+  //
+  //       &.attr {
+  //         color: $styleguide__color--attr;
+  //       }
+  //
+  //       &.value {
+  //         color: $styleguide__color--value;
+  //       }
+  //
+  //       &.html {
+  //         color: $color__font;
+  //       }
+  //     }
+  //   }
+  // }
+  //
+  // // ACCORDION
+  // $accordion--width: 100%;
+  // $accordion__summary--font: 42px;
+  // $accordion__summary--arrow: $accordion__summary--font/4;
+  // $accordion__summary--arrow-position: 48%;
+  // $accordion__content--speed: 0.12s;
+  //
+  // // css arrow template
+  // %arrow {
+  //   width: 0;
+  //   height: 0;
+  //   position: absolute;
+  //   top: $accordion__summary--arrow-position;
+  //   margin-left: $accordion__summary--font/4;
+  // }
+  //
+  // .accordion {
+  //   // details element
+  //   width: $accordion--width;
+  //
+  //   &__summary {
+  //     // summary element
+  //     margin: 0;
+  //     font-size: $accordion__summary--font;
+  //     position: relative;
+  //     cursor: pointer;
+  //     border-top: 1px solid $color__base--border;
+  //     //border-bottom: 1px solid $color__base--border;
+  //   }
+  //
+  //   &__summary::after {
+  //     // custom marker OPEN
+  //     content: '';
+  //     @extend %arrow;
+  //     border-left: $accordion__summary--arrow solid transparent;
+  //     border-right: $accordion__summary--arrow solid transparent;
+  //     border-top: $accordion__summary--arrow solid black;
+  //   }
+  //
+  //   &__content {
+  //       // accordion content styles
+  //       overflow: hidden;
+  //       border-top: 1px solid $color__base--border;
+  //       border-bottom: 1px solid $color__base--border;
+  //       transition: max-height $accordion__content--speed ease-in;
+  //   }
+  //
+  //   &:first-child {
+  //     .accordion__summary {
+  //       border-top: 0;
+  //     }
+  //   }
+  // }
+  //
+  // .accordion.close {
+  //   // accordion styles CLOSE
+  //
+  //   .accordion__summary {
+  //
+  //     &::after {
+  //       // custom marker closed
+  //       border-left: $accordion__summary--arrow solid transparent;
+  //       border-right: $accordion__summary--arrow solid transparent;
+  //       border-top: 0;
+  //       border-bottom: $accordion__summary--arrow solid black;
+  //     }
+  //
+  //     & + .accordion__content  {
+  //       max-height: 0;
+  //       border-bottom: 0;
+  //       transition: max-height $accordion__content--speed ease-out;
+  //     }
+  //   }
+  // }
+  //
+  // // CONTENT CONTAINER
+  // .accordion__content--container {
+  //   padding: $padding;
+  //
+  //   // CONTENT SPECIFIC STYLES
+  //   .color {
+  //     width: 100%;
+  //     height: 125px;
+  //     padding: $space--small $space;
+  //     margin-bottom: $padding;
+  //     @include display(flex);
+  //     @include align-items(flex-end);
+  //     @include justify-content(flex-end);
+  //   }
+  //
+  //   @include respond-to(medium) {
+  //     li {
+  //       @include span-columns(4);
+  //     }
+  //
+  //     li:last-child {
+  //       @include omega();
+  //     }
+  //   }
+  // }
 }

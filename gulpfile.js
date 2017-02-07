@@ -3,18 +3,21 @@ const gulp = require('gulp'),
   concat = require('gulp-concat'),
   sass = require('gulp-sass'),
   del = require('del'),
-  jshint = require('gulp-jshint'),
   uglify = require('gulp-uglify'),
   cleanCSS = require('gulp-clean-css'),
+  sourcemaps = require('gulp-sourcemaps'),
+	autoprefixer = require('gulp-autoprefixer'),
   imageMin = require('gulp-imagemin'),
   strip = require('gulp-strip-comments'),
+  nunjucksRender = require('gulp-nunjucks-render'),
+	data = require('gulp-data'),
   paths = {
   	neither:['src/*.html', 'src/**/*.html'],
   	styles:['src/css/**/*.scss', 'src/css/*.scss'],
   	styleSheet:['src/css/main.scss'],
   	scripts:['src/js/*.js','src/js/components/*.js', 'src/vendor/classList.min.js'],
-  	images:['src/img/*.jpg', 'src/img/*.svg', 'src/img/**/*'],
-  	html:['src/*.html', 'src/**/*.html'],
+  	images:['src/img/*.jpg', 'src/img/**/*'],
+  	svgs:['src/**/*.svg'],
     info:['src/*.png', 'src/*.xml', 'src/*.ico', 'src/*.txt']
   },
   vendor = {
@@ -24,8 +27,8 @@ const gulp = require('gulp'),
 var flags = require('yargs').argv;
 
 gulp.task('start',['clean','build','serve','watch']);
-gulp.task('watch',['watch:styles','watch:scripts','watch:neither','watch:html','watch:images','watch:info']);
-gulp.task('build',['build:styles','build:scripts', 'build:scripts:vendor', 'build:html', 'copy:images', 'copy:info']);
+gulp.task('watch',['watch:styles','watch:scripts','watch:neither','watch:images','watch:svg','watch:info']);
+gulp.task('build',['build:styles','build:scripts', 'build:scripts:vendor', 'build:svg', 'build:nunjucks', 'copy:images', 'copy:info']);
 
 gulp.task('clean',function(){
 	if(flags.prod){
@@ -33,21 +36,16 @@ gulp.task('clean',function(){
 	}
 });
 
-// Lint Task
-gulp.task('lint', function() {
-  var task = gulp.src(paths.scripts)
-    .pipe(jshint())
-    .pipe(jshint.reporter('watch:scripts'));
-    return task;
-});
-
 gulp.task('build:styles',function(){
 	var dest = flags.prod?'dist/css':'build/css';
 	var task = gulp.src(paths.styleSheet)
-	.pipe(sass({includePaths: require('node-neat').includePaths}).on('error', sass.logError));
+  .pipe(sourcemaps.init())
+	.pipe(sass({includePaths: require('node-bourbon').includePaths}).on('error', sass.logError))
+	.pipe(autoprefixer())
+  .pipe(sourcemaps.write());
 	if(flags.prod){
 		task = task.pipe(cleanCSS())
-		.pipe(concat('styles.min.css'));
+		.pipe(concat('main.min.css'));
 	}
 	task = task.pipe(gulp.dest(dest))
 	.pipe(connect.reload());
@@ -82,9 +80,19 @@ gulp.task('build:scripts:vendor',function(){
 	return task;
 });
 
-gulp.task('build:html',function(){
+gulp.task('build:svg',function(){
 	var dest = flags.prod?'dist':'build';
-	var task = gulp.src(paths.html)
+	var task = gulp.src(paths.svgs)
+	.pipe(gulp.dest(dest))
+	.pipe(connect.reload());
+	return task;
+});
+
+gulp.task('build:nunjucks',function(){
+	var dest = flags.prod?'dist':'build';
+	var task = gulp.src(paths.neither[0])
+	.pipe(data(function() {return require('./src/content/data.json')}))
+	.pipe(nunjucksRender({path: ['src/views/']}))
 	.pipe(gulp.dest(dest))
 	.pipe(connect.reload());
 	return task;
@@ -127,15 +135,15 @@ gulp.task('watch:styles', function(){
 });
 
 gulp.task('watch:scripts', function(){
-	gulp.watch(paths.scripts, ['lint', 'build:scripts'])
+	gulp.watch(paths.scripts, ['build:scripts'])
 });
 
-gulp.task('watch:html', function(){
-	gulp.watch(paths.html, ['build:html'])
+gulp.task('watch:svg', function(){
+	gulp.watch(paths.svgs, ['build:svg'])
 });
 
 gulp.task('watch:neither', function(){
-	gulp.watch(paths.neither, ['reload'])
+	gulp.watch(paths.neither, ['build:nunjucks'])
 });
 
 gulp.task('watch:images', function(){

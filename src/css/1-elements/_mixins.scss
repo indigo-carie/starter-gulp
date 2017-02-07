@@ -21,12 +21,3 @@ $breakpoints: (
       + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
-
-// SASS FUNCTIONS
-@function set-text-color($color) {
-  @if (lightness($color) > 50) {
-    @return $color__font; // Lighter backgorund, return dark color
-  } @else {
-    @return $color__font--light; // Darker background, return light color
-  }
-}
