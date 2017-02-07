@@ -1,5 +1,5 @@
 button, .button, input[type="button"], input[type="submit"] {
-  @include appearance(none);
+  appearance: none;
   border: 0;
   outline: 0;
   height: $button--height;
@@ -13,7 +13,7 @@ button, .button, input[type="button"], input[type="submit"] {
   margin: $space--medium $space $space--medium 0;
   padding: 0 $space--medium;
   cursor: pointer;
-  @include transition(color 0.25s $ease-in-out-sine, background-color 0.25s $ease-in-out-sine);
+  transition: color 0.25s $ease-in-out-sine, background-color 0.25s $ease-in-out-sine;
 
   &::last-child {
     margin-right: 0;

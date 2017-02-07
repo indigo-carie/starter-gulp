@@ -1,6 +1,7 @@
 input {
   //padding around input box/placeholder
-  @include padding(null $space--small null $space--small);
+  padding-left: $space--small;
+  padding-right: $space--small; 
 }
 
 // CUSTOM INPUT STYLES
