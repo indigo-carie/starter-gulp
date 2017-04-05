@@ -40,7 +40,7 @@ gulp.task('build:styles',function(){
 	var dest = flags.prod?'dist/css':'build/css';
 	var task = gulp.src(paths.styleSheet)
   .pipe(sourcemaps.init())
-	.pipe(sass({includePaths: require('node-bourbon').includePaths}).on('error', sass.logError))
+	.pipe(sass().on('error', sass.logError))
 	.pipe(autoprefixer())
   .pipe(sourcemaps.write());
 	if(flags.prod){

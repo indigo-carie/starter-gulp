@@ -30,7 +30,6 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-strip-comments": "^2.4.3",
     "gulp-uglify": "^2.0.0",
-    "node-bourbon": "^4.2.8",
     "yargs": "^6.6.0"
   }
 }

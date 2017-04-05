@@ -1,12 +1,12 @@
 input {
   //padding around input box/placeholder
   padding-left: $space--small;
-  padding-right: $space--small; 
+  padding-right: $space--small;
 }
 
 // CUSTOM INPUT STYLES
 .input {
   &--custom {
-    @include appearance(none);
+    appearance: none; 
   }
 }

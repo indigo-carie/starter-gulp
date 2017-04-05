@@ -2,7 +2,7 @@ $space--small: 5px;
 $space: 10px;
 $space--medium: 15px;
 
-$padding: 1em; 
+$padding: 1em;
 
 // BUTTONS
 $button--height: 40px;
@@ -29,3 +29,6 @@ $color__base--highlight: #EFEFEF;
 // TEXT COLORS
 $color__font: #000000;
 $color__font--light: #FFFFFF;
+
+$ease-out-sine: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$ease-in-out-sine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
